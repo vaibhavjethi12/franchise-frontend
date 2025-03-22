@@ -22,7 +22,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = `https://franchise-backend-production-56f7.up.railway.app/user/getinfo?em=${userId}`;
+        const url = `https://franchise-back2-production.up.railway.app/user/getinfo?em=${userId}`;
         const resp = await axios.get(url);
         setUserInfo(resp.data.data);
       } catch (error) {
@@ -35,7 +35,7 @@ function Dashboard() {
   useEffect(() => {
     const fetchPass = async () => {
       try {
-        const url = `https://franchise-backend-production-56f7.up.railway.app/user/getpass?userId=${userId}`;
+        const url = `https://franchise-back2-production.up.railway.app/user/getpass?userId=${userId}`;
         const resp = await axios.get(url);
         setPass(resp.data.data);
       } catch (error) {

@@ -29,7 +29,7 @@ const Curd = () => {
     }
 
     async function dosave() {
-        const url = "https://franchise-backend-production-56f7.up.railway.app/user/savepost";
+        const url = "https://franchise-back2-production.up.railway.app/user/savepost";
         let resp = await axios.post(url, obj, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
         if (resp.data.status === true) {
             alert(resp.data.msg);

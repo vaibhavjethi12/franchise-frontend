@@ -35,7 +35,7 @@ const SalesData = () => {
   };
   async function dosave()
   {
-    let url="https://franchise-backend-production-56f7.up.railway.app/user/salessave";
+    let url="https://franchise-back2-production.up.railway.app/user/salessave";
     let resp=await axios.post(url,formData, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
     if(resp.data.status==true)
     {

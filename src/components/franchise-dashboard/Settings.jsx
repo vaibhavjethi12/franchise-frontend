@@ -26,7 +26,7 @@ function Settings() {
                 return;
             }
             else {
-                var url = `https://franchise-backend-production-56f7.up.railway.app/user/changepassword?userId=${userId}&oldpass=${formData.oldPassword}&newpass=${formData.newPassword}`;
+                var url = `https://franchise-back2-production.up.railway.app/user/changepassword?userId=${userId}&oldpass=${formData.oldPassword}&newpass=${formData.newPassword}`;
                 let resp = await axios.get(url);
                 if (resp.data.status == true) {
                     alert(resp.data.msg);

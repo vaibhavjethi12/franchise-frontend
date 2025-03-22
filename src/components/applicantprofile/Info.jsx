@@ -11,7 +11,7 @@ function Info() {
         const fetchData = async () => {
             try {
                 console.log("ERR" + param.em)
-                const url = `https://franchise-backend-production-56f7.up.railway.app/user/getinfo?em=${param.em}`;
+                const url = `https://franchise-back2-production.up.railway.app/user/getinfo?em=${param.em}`;
                 const resp = await axios.get(url);
                 setObj(resp.data.data);
             } catch (error) {

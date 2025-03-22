@@ -17,7 +17,7 @@ const Application = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('https://franchise-backend-production-56f7.up.railway.app/user/find');
+            const response = await axios.get('https://franchise-back2-production.up.railway.app/user/find');
             if (response.data.status) {
                 setApplications(response.data.data);
             }
@@ -27,7 +27,7 @@ const Application = () => {
     };
 
     const handleAccept = async (em) => {
-        var url = `https://franchise-backend-production-56f7.up.railway.app/user/updatestatus?em=${em}`;
+        var url = `https://franchise-back2-production.up.railway.app/user/updatestatus?em=${em}`;
         let resp = await axios.get(url);
         if (resp.data.status) {
             alert(resp.data.msg);
@@ -38,7 +38,7 @@ const Application = () => {
     };
 
     const handleDecline = async (em) => {
-        var url = `https://franchise-backend-production-56f7.up.railway.app/user/updatedec?em=${em}`;
+        var url = `https://franchise-back2-production.up.railway.app/user/updatedec?em=${em}`;
         let resp = await axios.get(url);
         if (resp.data.status) {
             alert(resp.data.msg);
@@ -50,7 +50,7 @@ const Application = () => {
 
     const handlefranc = async (em) => {
         const password = nanoid(10); // Generate a random password
-        const url = `https://franchise-backend-production-56f7.up.railway.app/user/updatefranchise?em=${em}`;
+        const url = `https://franchise-back2-production.up.railway.app/user/updatefranchise?em=${em}`;
         let resp = await axios.get(url);
         if (resp.data.status) {
             alert(resp.data.msg);

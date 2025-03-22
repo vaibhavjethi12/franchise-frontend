@@ -91,7 +91,7 @@ const LoginForm = () => {
       return;
     }
 
-    var url = "https://franchise-backend-production-56f7.up.railway.app/user/login";
+    var url = "https://franchise-back2-production.up.railway.app/user/login";
     let resp = await axios.post(url, formData, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
 
     if (resp.data.status === true) {

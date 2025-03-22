@@ -8,7 +8,7 @@ const Charts = () => {
 
   useEffect(() => {
     // Fetch daily sales data
-    axios.get('https://franchise-backend-production-56f7.up.railway.app/user/daily-sales')
+    axios.get('https://franchise-back2-production.up.railway.app/user/daily-sales')
       .then(response => {
         if (response.data.status) {
           setDailySalesData(response.data.data);
@@ -21,7 +21,7 @@ const Charts = () => {
       });
 
     // Fetch monthly sales data
-    axios.get('https://franchise-backend-production-56f7.up.railway.app/user/monthly-sales')
+    axios.get('https://franchise-back2-production.up.railway.app/user/monthly-sales')
       .then(response => {
         if (response.data.status) {
           setMonthlySalesData(response.data.data);
