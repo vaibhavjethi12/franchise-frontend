@@ -32,7 +32,7 @@ function SalesHistory() {
 
     const dofind = async () => {
         const queryString = `fromDate=${formData.fromDate}&fromMonth=${formData.fromMonth}&fromYear=${formData.fromYear}&toDate=${formData.toDate}&toMonth=${formData.toMonth}&toYear=${formData.toYear}`;
-        const url = `http://localhost:2025/user/getsales?${queryString}`;
+        const url = `https://franchise-backend-production-56f7.up.railway.app/user/getsales?${queryString}`;
         
         try {
             let resp = await axios.get(url);
