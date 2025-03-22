@@ -29,7 +29,7 @@ const Curd = () => {
     }
 
     async function dosave() {
-        const url = "https://franchise-back2-production.up.railway.app/user/savepost";
+        const url = "https://franchise-backend-production-56f7.up.railway.app/user/savepost";
         let resp = await axios.post(url, obj, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
         if (resp.data.status === true) {
             alert(resp.data.msg);
@@ -120,7 +120,7 @@ const Curd = () => {
                                         : "bg-gray-100 text-black focus:border-black"
                                         }`}
                                     type="text" name="em" onChange={doUpdate}
-                                    placeholder="Email Id "
+                                    placeholder="Email Id "  required 
                                 />
                             </div>
                             <div className="flex flex-col sm:flex-row gap-3">
@@ -138,7 +138,7 @@ const Curd = () => {
                                         : "bg-gray-100 text-black focus:border-black"
                                         }`}
                                     type="text" name="add" onChange={doUpdate}
-                                    placeholder="Address"
+                                    placeholder="Address" required
                                 />
                             </div>
                             <div className="flex flex-col sm:flex-row gap-3">
@@ -148,7 +148,7 @@ const Curd = () => {
                                         : "bg-gray-100 text-black focus:border-black"
                                         }`}
                                     type="text" name="exb" onChange={doUpdate}
-                                    placeholder="Existing business "
+                                    placeholder="Existing business " required
                                 />
                                 <select
                                     className={`w-full px-5 py-3 rounded-lg  font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline ${darkMode
@@ -161,6 +161,9 @@ const Curd = () => {
                                     <option value="1950">1950</option>
                                     <option value="1951">1951</option>
                                     <option value="1952">1952</option>
+                                    <option value="1953">1953</option>
+                                    <option value="any year">any year</option>
+
                                 </select>
                             </div>
                             <h1
@@ -176,7 +179,7 @@ const Curd = () => {
                                         : "bg-gray-100 text-black focus:border-black"
                                         }`}
                                     type="text" name="sadd" onChange={doUpdate}
-                                    placeholder="Site Address"
+                                    placeholder="Site Address" required
                                 />
                                 <input
                                     className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline ${darkMode
@@ -184,7 +187,7 @@ const Curd = () => {
                                         : "bg-gray-100 text-black focus:border-black"
                                         }`}
                                     type="text" name="floor" onChange={doUpdate}
-                                    placeholder="Floor"
+                                    placeholder="Floor" required
                                 />
                             </div>
                             <div className="flex flex-col sm:flex-row gap-3">
@@ -194,7 +197,7 @@ const Curd = () => {
                                         : "bg-gray-100 text-black focus:border-black"
                                         }`}
                                     type="text" name="city" onChange={doUpdate}
-                                    placeholder="City"
+                                    placeholder="City" required
                                 />
                                 <input
                                     className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline ${darkMode
@@ -202,7 +205,7 @@ const Curd = () => {
                                         : "bg-gray-100 text-black focus:border-black"
                                         }`}
                                     type="text" name="state" onChange={doUpdate}
-                                    placeholder="State"
+                                    placeholder="State" required
                                 />
                             </div>
                             <div className="flex flex-col sm:flex-row gap-3">
@@ -212,7 +215,7 @@ const Curd = () => {
                                         : "bg-gray-100 text-black focus:border-black"
                                         }`}
                                     type="text" name="area" onChange={doUpdate}
-                                    placeholder="Total Area in Sq"
+                                    placeholder="Total Area in Sq" required
                                 />
                                 <input
                                     className={`w-full px-5 py-3 rounded-lg font-medium border-2 border-transparent placeholder-gray-500 text-sm focus:outline-none focus:border-2  focus:outline ${darkMode
@@ -220,7 +223,7 @@ const Curd = () => {
                                         : "bg-gray-100 text-black focus:border-black"
                                         }`}
                                     type="text" name="pin" onChange={doUpdate}
-                                    placeholder="Pincode"
+                                    placeholder="Pincode" required
                                 />
                             </div>
                             <div className="flex flex-col sm:flex-row gap-3">
